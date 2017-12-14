@@ -1,8 +1,20 @@
-#' Round the values in a vector in such a way that the sum of each of
-#' the rounded values exactly matches the rounded sum of each of the values
+#' @title Round values in a vector to sum properly
 #'
-#' @param x A vector.
-#' @param units A number indicating the rounded units.
+#' @description Takes a vector of values that are meant to be added together and
+#'   rounds them in such a way that the sum of each of the rounded values equals
+#'   the rounded sum of the unrounded values. For example, \code{c(1.2, 1.3,
+#'   1.4)} sums to 3.9, which becomes 4 when rounded to the nearest integer.
+#'   However, rounding each of the values to the nearest integer produces
+#'   \code{c(1, 1, 1)}, which only sums to 3. This function will "hard round"
+#'   the 1.4 up to 2, so that the resulting vector \code{c(1, 1, 2)} sums to 4.
+#'   This is a common practice in preparing financial statements.
+#'
+#' @param x A numeric vector of values to be rounded.
+#' @param units A number indicating the units to which to round. Unlike R's
+#'   \code{round} function which takes the argument \code{digits} and only
+#'   allows you to round to decimal places, \code{hard_round} takes the actual
+#'   unit of rounding, e.g. 1 for nearest integer, 10 for nearest ten, 0.1 for
+#'   nearest tenth. It can also round to non-decimal units, such as 5 or 0.2.
 #'
 #' @examples
 #' hard_round(x = c(1.2, 1.3, 1.4), units = 1)

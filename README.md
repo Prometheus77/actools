@@ -3,16 +3,19 @@ Contains several helper functions for R
 
 ## Installation
 Make sure you have the package 'devtools' installed, then run:
+
 `devtools::install_github("Prometheus77/actools")`
 
 ## Commands
 
 ### Between operators
 `%btwn%` checks whether the left hand side argument is between the min and max numbers in a vector supplied on the right hand side
+
 `%_btwn_%` a non-inclusive version of `%btwn%`, i.e. `x %_btwn_% c(2,4)` would return `FALSE` for x = 2 and x = 4
 
 ### Equivalency operators
 `%==%` works like `==` but handles NA, NULL, and empty lists
+
 `%!=%` works like `!=` but handles NA, NULL, and empty lists
 
 ### Hard round

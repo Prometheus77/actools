@@ -37,3 +37,6 @@ Example:
 > sum(hard_round(x, 1)) # sum of rounded elements now matches rounded sum
 [1] 4
 ```
+
+### Not in operator
+`%!in%` means "not in". `x %!in% y` is basically a wrapper for `!(x %in% y)`

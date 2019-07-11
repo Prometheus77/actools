@@ -7,5 +7,5 @@
 messagef(...)
 }
 \description{
-Using sprintf formatting variables in message, warning, and stop text.
+Convenience function that replaces `message(sprintf("This is %s", x))`. Also available for `warning()` and `stop()`.
 }

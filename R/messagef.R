@@ -1,22 +1,24 @@
 #' @title Using sprintf formatting variables in message, warning, and stop text.
 #'
-#' @description Convenience function that replaces \code{message(sprintf("This is
-#'   %s", x))}. Also available for \code{warning()} and \code{stop()}.
+#' @description Convenience function that replaces `message(sprintf("This is %s", x))`. Also available for `warning()` and `stop()`.
 #'
 #' @export
-messagef <- function(...) {
-  dots <- c(as.list(environment()), list(...))
-  message(do.call(sprintf, args = dots))
+messagef = function(...) {
+  dots = c(as.list(environment()), list(...))
+  output = do.call(sprintf, args = dots)
+  message(output)
 }
 
 #' @export
-stopf <- function(...) {
-  dots <- c(as.list(environment()), list(...))
-  stop(do.call(sprintf, args = dots))
+stopf = function(...) {
+  dots = c(as.list(environment()), list(...))
+  output = do.call(sprintf, args = dots)
+  stop(output)
 }
 
 #' @export
-warningf <- function(...) {
-  dots <- c(as.list(environment()), list(...))
-  warning(do.call(sprintf, args = dots))
+warningf = function(...) {
+  dots = c(as.list(environment()), list(...))
+  output = do.call(sprintf, args = dots)
+  warning(output)
 }

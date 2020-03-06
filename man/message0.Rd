@@ -7,6 +7,5 @@
 message0(...)
 }
 \description{
-Convenience function that replaces \code{message(paste0("This is
-  ", x))}. Also available for \code{warning()} and \code{stop()}.
+Convenience function that replaces \code{message(paste0("This is ", x))}. Also available for \code{warning()} and \code{stop()}.
 }

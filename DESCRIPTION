@@ -4,7 +4,7 @@ Title: R utilities by Aaron Cooley
 Version: 0.1.0
 Author: Aaron Cooley
 Maintainer: Aaron Cooley <aaronsama@gmail.com>
-Description: Contains several helper functions for R
+Description: Contains several helper functions for R.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

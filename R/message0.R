@@ -1,7 +1,6 @@
 #' @title Including variables in message, warning, and stop text.
 #'
-#' @description Convenience function that replaces \code{message(paste0("This is
-#'   ", x))}. Also available for \code{warning()} and \code{stop()}.
+#' @description Convenience function that replaces \code{message(paste0("This is ", x))}. Also available for \code{warning()} and \code{stop()}.
 #'
 #' @export
 message0 <- function(...) {

@@ -7,5 +7,5 @@
 #'
 #' @export
 ctrl_c <- function(table, sep = "\t", row.names = FALSE, col.names = TRUE) {
-  write.table(table, "clipboard", sep = sep, row.names = row.names, col.names = col.names)
+  utils::write.table(table, "clipboard", sep = sep, row.names = row.names, col.names = col.names)
 }
